@@ -18,8 +18,8 @@ pipeline {
             steps {
                 sh "pwd"
                 sh "ls -a"
-                // sh "docker build ./java-tomcat-sample-docker -t tomcatsamplewebapp:${env.BUILD_ID}"
-                sh "docker run -p 8080:8080 tomcatsamplewebapp:5"
+                sh "docker build ./java-tomcat-sample-docker -t tomcatsamplewebapp:${env.BUILD_ID}"
+                sh "docker run -p 8080:8080 tomcatsamplewebapp:${env.BUILD_ID}"
             }
         }
 
